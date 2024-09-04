@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #000000;
+    background: purple;
     margin: 0;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .option:is(:hover, .active) :where(span, label) {
-    color: #4A98F7;
+    color: purple;
 }
 
 .option #fill-color {
@@ -70,13 +70,14 @@ body {
 }
 
 #fill-color:checked ~ label {
-    color: #4A98F7;
+    color: purple;
 }
 
 .option #size-slider {
     width: 100%;
     height: 5px;
     margin-top: 10px;
+    background: purple;
 }
 
 .colors .options {
@@ -157,12 +158,12 @@ body {
 
 .clear-canvas:hover {
     color: #fff;
-    background: #4A98F7;
+    background: purple;
 }
 
 .buttons .save-img {
-    background: #4A98F7;
-    border: 1px solid #4A98F7;
+    background: purple;
+    border: 1px solid violet;
 }
 
 .drawing-board {
@@ -179,5 +180,5 @@ body {
     background: #fff;
     border-radius: 7px;
     margin: 10px; 
-    box-shadow: 0 0 0 5px #000; 
+    box-shadow: 0 0 0 5px purple; 
 }
