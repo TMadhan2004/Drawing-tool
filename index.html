@@ -6,6 +6,7 @@
     <title>Drawing Tool</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/konva@9.3.14/konva.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -24,6 +25,10 @@
                     <li class="option tool" id="triangle">
                         <img src="" alt="">
                         <span>Triangle</span>
+                    </li>
+                    <li class="option tool" id="arrow">
+                        <img src="" alt="">
+                        <span>Arrow</span>
                     </li>
                     <li class="option tool" id="line">
                         <img src="" alt="">
@@ -54,10 +59,10 @@
             <div class="row colors">
                 <label class="title">Colors</label>
                 <ul class="options">
-                    <li class="option"></li>
-                    <li class="option selected"></li>
-                    <li class="option"></li>
-                    <li class="option"></li>
+                    <li class="option" style="background-color: black;"></li>
+                    <li class="option selected" style="background-color: red;"></li>
+                    <li class="option" style="background-color: green;"></li>
+                    <li class="option" style="background-color: blue;"></li>
                     <li class="option">
                         <input type="color" id="color-picker" value="#4A98F7">
                     </li>
@@ -69,6 +74,7 @@
             </div>
         </section>
         <section class="drawing-board">
+            <div id="konva-container" style="position:absolute;top:0;left:0;"></div>
             <canvas></canvas>
         </section>
     </div>
