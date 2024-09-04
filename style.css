@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #4A98F7;
+    background: #000000;
     margin: 0;
 }
 
-.container{
+.container {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-.tools-board{
+.tools-board {
     width: 210px;
     padding: 15px 22px 0;
     background: #fff;
@@ -34,57 +34,57 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.tools-board .row{
+.tools-board .row {
     margin-bottom: 20px;
 }
 
-.row .options{
+.row .options {
     list-style: none;
     margin: 10px 0 0 5px;
 }
 
-.row .options .option{
+.row .options .option {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.option:is(:hover, .active) img{
+.option:is(:hover, .active) img {
     filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
 }
 
-.option :where(span, label){
+.option :where(span, label) {
     color: #5A6168;
     cursor: pointer;
     padding-left: 10px;
 }
 
-.option:is(:hover, .active) :where(span, label){
+.option:is(:hover, .active) :where(span, label) {
     color: #4A98F7;
 }
 
-.option #fill-color{
+.option #fill-color {
     height: 14px;
     width: 14px;
     cursor: pointer;
 }
 
-#fill-color:checked ~ label{
+#fill-color:checked ~ label {
     color: #4A98F7;
 }
 
-.option #size-slider{
+.option #size-slider {
     width: 100%;
     height: 5px;
     margin-top: 10px;
 }
 
-.colors .options{
+.colors .options {
     display: flex;
     justify-content: space-between;
 }
 
-.colors .option{
+.colors .option {
     height: 20px;
     width: 20px;
     background: red;
@@ -93,28 +93,28 @@ body{
     position: relative;
 }
 
-.colors .option:nth-child(1){
+.colors .option:nth-child(1) {
     background-color: #fff;
     border: 1px solid #bfbfbf;
 }
 
-.colors .option:nth-child(2){
+.colors .option:nth-child(2) {
     background-color: #000;
 }
 
-.colors .option:nth-child(3){
+.colors .option:nth-child(3) {
     background-color: #E02020;
 }
 
-.colors .option:nth-child(4){
+.colors .option:nth-child(4) {
     background-color: #6DD400;
 }
 
-.colors .option:nth-child(5){
+.colors .option:nth-child(5) {
     background-color: #4A98F7;
 }
 
-.colors .option.selected::before{
+.colors .option.selected::before {
     position: absolute;
     content: "";
     top: 50%;
@@ -128,16 +128,16 @@ body{
     cursor: pointer;
 }
 
-.colors .option:first-child.selected::before{
+.colors .option:first-child.selected::before {
     border-color: #ccc;
 }
 
-.option #color-picker{
+.option #color-picker {
     opacity: 0;
     cursor: pointer;
 }
 
-.buttons button{
+.buttons button {
     width: 100%;
     color: #fff;
     border: none;
@@ -150,22 +150,22 @@ body{
     cursor: pointer;
 }
 
-.buttons .clear-canvas{
+.buttons .clear-canvas {
     color: #6C757D;
     border: 1px solid #6C757D;
 }
 
-.clear-canvas:hover{
+.clear-canvas:hover {
     color: #fff;
     background: #4A98F7;
 }
 
-.buttons .save-img{
+.buttons .save-img {
     background: #4A98F7;
     border: 1px solid #4A98F7;
 }
 
-.drawing-board{
+.drawing-board {
     flex: 1;
     margin-left: 230px;
     display: flex;
@@ -173,9 +173,11 @@ body{
     align-items: center;
 }
 
-.drawing-board canvas{
-    width: 100%;
-    height: 100vh;
+.drawing-board canvas {
+    width: calc(100% - 20px); 
+    height: calc(100vh - 20px);
     background: #fff;
     border-radius: 7px;
+    margin: 10px; 
+    box-shadow: 0 0 0 5px #000; 
 }
